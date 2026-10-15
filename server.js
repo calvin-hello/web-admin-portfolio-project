@@ -15,6 +15,10 @@ app.get("/health", (req, res) => {
     res.json({status: "ok", uptime: process.uptime()})
 })
 
+app.get('/version', (req, res) => {
+  res.send(`App version: ${process.env.APP_VERSION || 'unset'}`);
+})
+
 app.listen(PORT, "127.0.0.1", () => {
     console.log(`listening on http://127.0.0.1:${PORT}`)
 })
