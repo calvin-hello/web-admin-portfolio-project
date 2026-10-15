@@ -6,7 +6,7 @@ const app = express()
 const PORT = 3000
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
-app.use(express.static(path.join(__dirname,"public/index.html")))
+app.use(express.static(path.join(__dirname,"public")))
 
 // app.get("/", (req, res) => {
 //     res.send("Hello Guys!!")
